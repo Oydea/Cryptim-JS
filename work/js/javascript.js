@@ -1,14 +1,14 @@
-function dropdown(){
+document.getElementById('product').addEventListener("click", dropdown);
+function dropdown() {
     document.getElementById('dropdown').removeAttribute("class", "up");
     document.getElementById('dropdown').setAttribute("class", "drop");
     document.getElementById('product').addEventListener("click", dropup);
 };
-function dropup(){
+function dropup() {
     document.getElementById('dropdown').removeAttribute('class', 'drop');
     document.getElementById('dropdown').setAttribute("class", "up");
     document.getElementById('product').removeEventListener("click", dropup);
 };
-
 
 const form1 = document.getElementById('form1');
 const form2 = document.getElementById('form2');
@@ -177,4 +177,3 @@ form3.addEventListener("submit", (e) => {
     form4.classList.remove("formhide");
     document.getElementById("thanks").innerText = "Muito obrigado pela sua colaboração, " + nome.value + "!!";
     e.preventDefault()});
-document.getElementById('product').addEventListener("click", dropdown);
